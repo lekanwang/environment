@@ -53,7 +53,19 @@
 #   -----------------------------
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
-alias mv='mv -iv'                           # Preferred 'mv' implementation
+function mv() {
+  if [ "$#" -ne 1 ]; then
+    command mv "$@"
+    return
+  fi
+  if [ ! -f "$1" ]; then
+    command file "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  mv -v "$1" "$newfilename"
+} 
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ls='ls -FGahp'
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
