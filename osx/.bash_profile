@@ -29,6 +29,7 @@
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:/Users/lwang/tools/trails/bin/unix:$PATH"
+    export PATH="~/bin/:$PATH"
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
